@@ -72,14 +72,14 @@ class TestUser(unittest.TestCase):
         '''
         test to check if we can return a Boolean  if we cannot find the user.
         '''
-
         self.new_user.save_user()
         test_user = User("Langat","justo01","justo12345") # new user
         test_user.save_user()
 
         user_exists = User.user_exist("Langat")
 
-        self.assertTrue(user_exists)         
+        self.assertTrue(user_exists)    
+
 
 if __name__ ==  '__main__':
     unittest.main()
