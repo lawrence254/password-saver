@@ -60,7 +60,6 @@ class TestUser(unittest.TestCase):
         '''
         test to check if we can find a user by phone number and display information
         '''
-
         self.new_user.save_user()
         test_user = User("Langat","justo01","justo12345") # new user
         test_user.save_user()
