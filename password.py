@@ -13,7 +13,7 @@ class User:
         self.username = username
         self.password = password
         
-      # Init method up here
+     # Init method up here
     def save_user(self):
 
         '''
