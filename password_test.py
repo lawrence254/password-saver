@@ -56,9 +56,9 @@ class TestUser(unittest.TestCase):
             self.new_user.delete_user()# Deleting a user object
             self.assertEqual(len(User.user_list),1)
 
-    def test_find_user_by_number(self):
+    def test_find_user_by_name(self):
         '''
-        test to check if we can find a user by phone number and display information
+        test to check if we can find a user by name and display information
         '''
         self.new_user.save_user()
         test_user = User("Langat","justo01","justo12345") # new user
@@ -117,7 +117,7 @@ class TestCredential(unittest.TestCase):
     # other test cases here
     def test_save_multiple_credential(self):
             '''
-            test_save_multiple_credential to check if we can save multiple user
+            test_save_multiple_credential to check if we can save multiple credential
             objects to our credential_list
             '''
             self.new_credential.save_credential()
@@ -127,14 +127,26 @@ class TestCredential(unittest.TestCase):
 
     def test_delete_credential(self):
             '''
-            test_delete_credential to test if we can remove a credential from our user list
+            test_delete_credential to test if we can remove a credential from our credential list
             '''
             self.new_credential.save_credential()
             test_credential = Credential("Langat","twitter","justo01","justo12345") # new credential
             test_credential.save_credential()
 
             self.new_credential.delete_credential()# Deleting a credential object
-            self.assertEqual(len(Credential.credential_list),1)                    
+            self.assertEqual(len(Credential.credential_list),1)    
+
+    def test_find_credential_by_name(self):
+        '''
+        test to check if we can find a credential by name and display information
+        '''
+        self.new_credential.save_credential()
+        test_credential = Credential("Langat","twitter","justo01","justo12345") # new credential
+        test_credential.save_credential()
+
+        found_credential = Credential.find_by_name("Langat")
+
+        self.assertEqual(found_credential.username,test_credential.username)                         
 
 
 if __name__ ==  '__main__':

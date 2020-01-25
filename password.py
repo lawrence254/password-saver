@@ -34,7 +34,7 @@ class User:
     @classmethod
     def find_by_name(cls,name):
         '''
-        Method that takes in a name and returns a contact that matches that name.
+        Method that takes in a name and returns a user that matches that name.
 
         Args:
             name:  name to search for
@@ -92,5 +92,21 @@ class Credential:
         delete_credential method deletes a saved credential from the credential_list
         '''
 
-        Credential.credential_list.remove(self)      
+        Credential.credential_list.remove(self)   
+
+    @classmethod
+    def find_by_name(cls,name):
+        '''
+        Method that takes in a name and returns a credential that matches that name.
+
+        Args:
+            name:  name to search for
+        Returns :
+            Credential that matches the name.
+        '''
+
+        for credential in cls.credential_list:
+            if credential.name == name:
+                return credential   
+       
     
