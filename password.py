@@ -58,4 +58,9 @@ class User:
             if user.name == name:
                     return True
 
-        return False                  
+        return False    
+
+class Credentials:
+     """
+    Class that generates new instances of credentials.
+    """
