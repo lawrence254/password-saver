@@ -1,4 +1,5 @@
 class User:
+
     """
     Class that generates new instances of users.
     """
@@ -58,9 +59,30 @@ class User:
             if user.name == name:
                     return True
 
-        return False    
+        return False   
 
-class Credentials:
-     """
-    Class that generates new instances of credentials.
+
+class Credential:
+    
     """
+    Class that generates new instances of credential.
+    """
+    
+    credential_list=[]
+    
+    def __init__(self, name, account, username, password):
+        # docstring removed for simplicity
+        self.name = name
+        self.account= account
+        self.username = username
+        self.password = password
+    
+        # Init method up here
+    def save_credential(self):
+    
+        '''
+        save_user method saves credential objects into credential_list
+        '''
+    
+        Credential.credential_list.append(self)   
+    
