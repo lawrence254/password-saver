@@ -25,6 +25,13 @@ def find_user(name):
     '''
     return User.find_by_name(name)  
 
+def check_existing_users(name):
+    '''
+    Function that check if a user exists with that name and return a Boolean
+    '''
+    return User.user_exist(name)  
+      
+
 def display_users():
     '''
     Function that returns all the saved users
