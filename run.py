@@ -30,10 +30,17 @@ def check_existing_users(name):
     Function that check if a user exists with that name and return a Boolean
     '''
     return User.user_exist(name)  
-      
+
 
 def display_users():
     '''
     Function that returns all the saved users
     '''
-    return User.display_users()      
+    return User.display_users()  
+
+def create_credential(name, account, username, password):
+    '''
+    Function to create a new credential
+    '''
+    new_credential = Credential(name,account,username,password)
+    return new_credential       
