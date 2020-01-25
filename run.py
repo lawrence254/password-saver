@@ -61,4 +61,10 @@ def find_credential(name):
     '''
     Function that finds a credential by name and returns the credential
     '''
-    return Credential.find_by_name(name)                 
+    return Credential.find_by_name(name)    
+
+def check_existing_credentials(name):
+    '''
+    Function that check if a credential exists with that name and return a Boolean
+    '''
+    return Credential.credential_exist(name)                   
