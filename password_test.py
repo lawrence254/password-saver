@@ -158,7 +158,16 @@ class TestCredential(unittest.TestCase):
 
         credential_exists = Credential.credential_exist("Langat")
 
-        self.assertTrue(credential_exists)                            
+        self.assertTrue(credential_exists)
+
+    def test_display_all_credential(self):
+        '''
+        method that returns a list of all credential saved
+        '''
+
+        self.assertEqual(Credential.display_credentials(),Credential.credential_list)    
+
+               
 
 
 if __name__ ==  '__main__':
