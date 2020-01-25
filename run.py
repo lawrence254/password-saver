@@ -55,4 +55,10 @@ def del_credential(credential):
     '''
     Function to delete a credential
     '''
-    credential.delete_credential()               
+    credential.delete_credential()   
+
+def find_credential(name):
+    '''
+    Function that finds a credential by name and returns the credential
+    '''
+    return Credential.find_by_name(name)                 
