@@ -23,4 +23,10 @@ def find_user(name):
     '''
     Function that finds a user by name and returns the user
     '''
-    return User.find_by_name(name)    
+    return User.find_by_name(name)  
+
+def display_users():
+    '''
+    Function that returns all the saved users
+    '''
+    return User.display_users()      
