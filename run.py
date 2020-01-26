@@ -1,4 +1,7 @@
 #!/usr/bin/env python3.7
+from password import User, Credential
+import random
+import getpass
 
 def create_user(name,username,password):
     '''
@@ -6,6 +9,12 @@ def create_user(name,username,password):
     '''
     new_user = User(name,username,password)
     return new_user
+
+def generate_password(user):
+    """
+    Function to generate random password for user
+    """
+    return user.generate_random_password()    
 
 def save_users(user):
     '''
@@ -18,25 +27,6 @@ def del_user(user):
     Function to delete a user
     '''
     user.delete_user()     
-
-def find_user(name):
-    '''
-    Function that finds a user by name and returns the user
-    '''
-    return User.find_by_name(name)  
-
-def check_existing_users(name):
-    '''
-    Function that check if a user exists with that name and return a Boolean
-    '''
-    return User.user_exist(name)  
-
-
-def display_users():
-    '''
-    Function that returns all the saved users
-    '''
-    return User.display_users()  
 
 def create_credential(name, account, username, password):
     '''
@@ -57,20 +47,33 @@ def del_credential(credential):
     '''
     credential.delete_credential()   
 
-def find_credential(name):
+def find_credential(username):
     '''
-    Function that finds a credential by name and returns the credential
+    Function that finds a credential by username and returns the credential
     '''
-    return Credential.find_by_name(name)    
+    return Credential.find_by_username(username)    
 
-def check_existing_credentials(name):
+def check_existing_credentials(username):
     '''
-    Function that check if a credential exists with that name and return a Boolean
+    Function that check if a credential exists with that username and return a Boolean
     '''
-    return Credential.credential_exist(name)      
+    return Credential.credential_exist(username)      
 
 def display_credentials():
     '''
     Function that returns all the saved credentials
     '''
-    return Credential.display_credentials()                  
+    return Credential.display_credentials()  
+
+
+def main():
+    print("Welcome to password locker. What is your name?")
+    name = input()
+
+    ask= input(f"Hello {name}.Do you have an account? yes or no")
+    print('\n')
+          
+if __name__ == '__main__':
+
+    main()                                  
+                       

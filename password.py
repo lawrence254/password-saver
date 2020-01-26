@@ -129,6 +129,6 @@ class Credential:
         '''
         method that returns the credential list
         '''
-        return cls.credential_list            
-       
-    
+        return cls.credential_list   
+
+   
