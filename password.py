@@ -95,18 +95,18 @@ class Credential:
         Credential.credential_list.remove(self)   
 
     @classmethod
-    def find_by_name(cls,name):
+    def find_by_username(cls,username):
         '''
-        Method that takes in a name and returns a credential that matches that name.
+        Method that takes in a username and returns a credential that matches that username.
 
         Args:
-            name:  name to search for
+            username:  username to search for
         Returns :
-            Credential that matches the name.
+            Credential that matches the username.
         '''
 
         for credential in cls.credential_list:
-            if credential.name == name:
+            if credential.username == username:
                 return credential  
 
     @classmethod

@@ -136,15 +136,15 @@ class TestCredential(unittest.TestCase):
             self.new_credential.delete_credential()# Deleting a credential object
             self.assertEqual(len(Credential.credential_list),1)    
 
-    def test_find_credential_by_name(self):
+    def test_find_credential_by_username(self):
         '''
-        test to check if we can find a credential by name and display information
+        test to check if we can find a credential by username and display information
         '''
         self.new_credential.save_credential()
         test_credential = Credential("Langat","twitter","justo01","justo12345") # new credential
         test_credential.save_credential()
 
-        found_credential = Credential.find_by_name("Langat")
+        found_credential = Credential.find_by_username("justo01")
 
         self.assertEqual(found_credential.username,test_credential.username)   
 
