@@ -80,7 +80,18 @@ def main():
         if create == "no":
             print("Please enter your preffered password then")
             getpass.getpass()
-            print("Signin successfull")        
+            print("Signin successfull") 
+
+        while True:
+            print("""
+            Use the short codes: cc to create new credential
+                                 dc to display credential
+                                 fc to find credential
+                                 dl to delete credential
+                                 rp to generate random password
+                                 ex to exit
+                                 """)  
+            short_code = input ("Navigate now using the short-codes")         
 if __name__ == '__main__':
 
     main()                                  
