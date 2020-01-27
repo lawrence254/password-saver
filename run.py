@@ -3,6 +3,7 @@ from password import User, Credential
 import random
 import getpass
 import string
+import uuid
 
 def create_user(name,username,password):
     '''
@@ -68,10 +69,10 @@ def display_credentials():
 
 
 def main():
-    print("Welcome to password locker. What is your name?")
+    print("What is your name?")
     name = input()
 
-    ask= input(f"Hello {name}.Do you have an account? yes or no > ")
+    ask= input(f"{name} Do you have an account? yes or no > ")
 
     if ask == "no":
         print("Signup now")
