@@ -31,6 +31,12 @@ This is a platform that enable users to store their credentials upon log-in and 
 - Python 3.7
 - Git
 
+## Codebeat
+- [![codebeat badge](https://codebeat.co/badges/264eb043-f5dd-4b78-9f5e-31ad97ce0ff0)](https://codebeat.co/projects/github-com-langat05-password-saver-feature)
+
+## License
+
+
 ## Contact Details
 Langat K Justus
 Email: Justuslangat78@gmail.com

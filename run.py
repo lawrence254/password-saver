@@ -42,7 +42,7 @@ def save_credential(credential):
     '''
     credential.save_credential()   
 
-def del_credential(credential):
+def del_credential():
     '''
     Function to delete a credential
     '''
@@ -158,9 +158,10 @@ def main():
 
             elif short_code == "dl":
                 print("Enter the account username of the credential you would like to delete.")
-                my_delete = input("> ")
-                my_del = find_credential(my_delete)
-                Credential.credential_list.remove(my_del)
+                username = input("> ")
+                username = find_credential(username)
+                Credential.credential_list.remove(username)
+                
             elif short_code == "ex":
                 print("Logged out")
                 break
@@ -201,7 +202,7 @@ def main():
                         save_credential(create_credential(name, account, username, password))
 
                         print("\n")
-                        print(f"New credential {name} {account} {username} {password} have just been created")
+                        print(f"New credential Name: {name} Account: {account} username: {username} Password: {password} have just been created")
                         print("\n")
 
                     elif short_code == "rp":
@@ -245,9 +246,10 @@ def main():
 
                     elif short_code == "dl":
                            print("Enter the account username of the credential you would like to delete.")
-                           my_delete = input("> ")
-                           my_del = find_credential(name)
-                           Credential.credential_list.remove(name)
+                           username = input("> ")
+                           username = find_credential(username)
+                           Credential.credential_list.remove(username)
+                           print(f" Credential with{username}has been moved to trash successfully")
 
                     elif short_code == "ex":
                            print("Logged out")
