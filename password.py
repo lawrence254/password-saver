@@ -21,7 +21,7 @@ class User:
         save_user method saves user objects into user_list
         '''
 
-        User.user_list.append(self)  
+        User.user_list.append(self)
         
     def delete_user(self):
 
@@ -29,7 +29,10 @@ class User:
         delete_user method deletes a saved user from the user_list
         '''
 
-        User.user_list.remove(self) 
+        User.user_list.remove(self)
+
+    # def get_all_users():
+    #     pass
 
     @classmethod
     def find_by_name(cls,name):
@@ -130,5 +133,3 @@ class Credential:
         method that returns the credential list
         '''
         return cls.credential_list   
-
-   
